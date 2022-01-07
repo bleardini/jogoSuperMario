@@ -77,7 +77,7 @@ h1 {
 .botaoEscolha {
   display: flex;
   justify-content: center;
-  margin: 50vh;
+  margin: 40px;
 }
 button {
   border: none;
@@ -126,8 +126,8 @@ a:hover {
 
 .flip-card {
   background-color: transparent;
-  width: 300px;
-  height: 200px;
+  width: 350px;
+  height: 388px;
   perspective: 1000px;
 }
 

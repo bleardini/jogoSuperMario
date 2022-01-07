@@ -77,7 +77,7 @@ h1 {
 .botaoEscolha {
   display: flex;
   justify-content: center;
-  margin: 10vh;
+  margin: 50vh;
 }
 button {
   border: none;
@@ -108,7 +108,7 @@ footer {
   width: 100%;
   padding-top: 25px;
   font-size: 1.8em;
-  margin-top: 30vh;
+  /* margin: 0vh; */
 }
 a {
   color: green;

@@ -1,133 +1,182 @@
-@import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
 
-
-
-header{
-    text-align: center;
-   
-   
-  
+header {
+  text-align: center;
 }
 
 body {
-    font-family: 'VT323', monospace;
-    color: #206b0d;
-    font-size: 15px;
-   
-    
+  font-family: "VT323", monospace;
+  color: #206b0d;
+  font-size: 15px;
 }
 /*começo história*/
 .mainInicio {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .blocoHistoria {
-    font-size: 1.8em;
-    line-height: 1.2;
-    background: #f3ebeb;
-    max-width: 50%;   
-    text-align: justify;
-    padding: 50px;
-    border-radius: 50px;
-    border: green solid 4px;
-    box-shadow: 10px 25px 10px black;
-    margin-top: 10vh;
+  font-size: 1.8em;
+  line-height: 1.2;
+  background: #f3ebeb;
+  max-width: 50%;
+  text-align: justify;
+  padding: 50px;
+  border-radius: 50px;
+  border: green solid 4px;
+  box-shadow: 10px 25px 10px black;
+  margin-top: 10vh;
 }
 #citacao {
-    color: green;
+  color: green;
 }
 .botaoStart {
-    display: flex;
-    justify-content: center;
-    margin: 10vh;
-    
+  display: flex;
+  justify-content: center;
+  margin: 10vh;
 }
 /*fim historia*/
 
 /*comeco personagens*/
 
 .tituloPersonagens {
-    display: flex;
-    justify-content: center;
+  display: flex;
+  justify-content: center;
 }
 h1 {
-    margin-top: 10vh;
-    font-size: 4em;
+  margin-top: 10vh;
+  font-size: 4em;
 }
 
 .mainPersonagens {
-    display: flex;
-    justify-content: space-around;
-    margin: 4%;
-    perspective: 1000px;
- 
+  display: flex;
+  justify-content: space-around;
+  margin: 4%;
+  perspective: 1000px;
 }
 .blocoPersonagens {
-    background: #f3ebeb;
-    font-size: 1.5em;
-    width: 20vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    align-items: center;
-    text-align: justify;
-    padding: 35px;
-    border-radius: 50px;
-    border: green solid 4px;
-    box-shadow: 10px 25px 10px black;
+  background: #f3ebeb;
+  font-size: 1.5em;
+  width: 20vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: justify;
+  padding: 35px;
+  border-radius: 50px;
+  border: green solid 4px;
+  box-shadow: 10px 25px 10px black;
 }
 .blocoPersonagens img {
-    height: 20vh;
-    border-radius: 20px;
-    border-color: green;
+  height: 20vh;
+  border-radius: 20px;
+  border-color: green;
 }
 .botaoEscolha {
-    display: flex;
-    justify-content: center;
-    margin: 10vh;
+  display: flex;
+  justify-content: center;
+  margin: 10vh;
 }
 button {
-    border: none;
-    color: green;
-    border-radius: 15px;
-    font-size: 2em;
-    background: none;
-    font-family: 'VT323', monospace;
+  border: none;
+  color: green;
+  border-radius: 15px;
+  font-size: 2em;
+  background: none;
+  font-family: "VT323", monospace;
 }
 button:hover {
-    font-size: 2.3em;
-    color: #000000;
-    cursor: pointer;
-    transition: 0.3s;
+  font-size: 2.3em;
+  color: #000000;
+  cursor: pointer;
+  transition: 0.3s;
 }
 /*fim personagens*/
 
 /*comeco rodape*/
 .footerPrincipal {
-    margin-top: 25px;
-
+  margin-top: 25px;
 }
 footer {
-    text-align: center;
-    background: black;
-    opacity: 50%;
-    color: whitesmoke;
-    height: 60px;
-    width:100%;
-    padding-top: 25px;
-    font-size: 1.8em;
-    
+  text-align: center;
+  background: black;
+  opacity: 50%;
+  color: whitesmoke;
+  height: 60px;
+  width: 100%;
+  padding-top: 25px;
+  font-size: 1.8em;
+  margin-top: 30vh;
 }
 a {
-    color: green;
-    text-decoration: none;
-    font-size: 30px;
-    transition: 0.3s;
+  color: green;
+  text-decoration: none;
+  font-size: 30px;
+  transition: 0.3s;
 }
 a:hover {
-    color: #000000;
-    cursor: pointer;
+  color: #000000;
+  cursor: pointer;
 }
 /*fim rodape*/
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  perspective: 1000px; /* Remove this if you don't want the 3D effect */
+}
+
+/* This container is needed to position the front and back side */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+/* Do an horizontal flip when you move the mouse over the flip box container */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Position the front and back side */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+}
+
+/* Style the front side (fallback if image is missing) */
+.flip-card-front {
+  color: #206b0d;
+}
+
+/* Style the back side */
+.flip-card-back {
+  background: #f3ebeb;
+  font-size: 1.5em;
+  width: 20vw;
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: justify;
+  padding: 35px;
+  border-radius: 50px;
+  border: green solid 4px;
+  box-shadow: 10px 25px 10px black;
+  color: #206b0d;
+  transform: rotateY(180deg);
+}
+/* .flip-card-back img{
+      width: 50% ;
+  } */
